@@ -22,7 +22,7 @@ public class ApplicationFinder {
 
         for (ApplicationInfo packageInfo : packages) {
             Intent intent = pm.getLaunchIntentForPackage(packageInfo.packageName);
-            if (intent == null || !intent.getComponent().getClassName().contains("UnityPlayerActivity"))
+            if (intent == null || !intent.getComponent().getClassName().contains("SocialVrActivity"))
                 continue;
 
             applicationDatas.add(new UnityApplicationData(pm, packageInfo));
